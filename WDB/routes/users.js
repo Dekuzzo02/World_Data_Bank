@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     const uri = "mongodb+srv://vdicuzzo:Inguine23@cluster0.lv4ye.mongodb.net/test";
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     client.connect(err => {
-        const collection = client.db("World_Data_Bank").collection(""); //Mi connetto alla collection movies
+        const collection = client.db("World_Data_Bank").collection("1"); //Mi connetto alla collection movies
         // perform actions on the collection object
         collection.find().limit(10).toArray((err, result) => {
             if (err) console.log(err.message); //Se c'è qualche errore lo stampo
